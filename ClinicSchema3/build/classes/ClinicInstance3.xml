@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:Clinic xmlns:m="http://www.example.org/schemas/clinic3" 
+	xmlns:patient="http://www.example.org/schemas/clinic3/patient" 
+	xmlns:clinicid="http://www.example.org/schemas/clinic3/Clinic_Ids" 
+	xmlns:treatment="http://www.example.org/schemas/clinic3/treatment3" 
+	xmlns:provider="http://www.example.org/schemas/clinic3/provider" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/schemas/clinic3 Clinic.xsd ">
+	
+	<patient:Patient>
+		<patient:patient-id>10</patient:patient-id>
+		<patient:name>Lauren</patient:name>
+		<patient:dob>1990-10-10</patient:dob>
+		<patient:treatments>
+			<treatment:drug>
+				<treatment:provider-id>1</treatment:provider-id>
+				<treatment:diagnosis>toxic shock syndrome</treatment:diagnosis>
+				<treatment:name>amoxicillin</treatment:name>
+				<treatment:dosage>200</treatment:dosage>
+			</treatment:drug>
+		</patient:treatments>
+	</patient:Patient>
+	<patient:Patient>
+		<patient:patient-id>12</patient:patient-id>
+		<patient:name>Mina</patient:name>
+		<patient:dob>1980-02-06</patient:dob>
+		<patient:treatments>
+			<treatment:surgery>
+				<treatment:provider-id>1</treatment:provider-id>
+				<treatment:diagnosis>polycystic ovary removal</treatment:diagnosis>
+				<treatment:date>2014-09-17</treatment:date>			
+			</treatment:surgery>
+			<treatment:radiology>
+				<treatment:provider-id>1</treatment:provider-id>
+				<treatment:diagnosis>polycistic ovary screening</treatment:diagnosis>
+				<treatment:date>2014-09-15</treatment:date>
+				<treatment:date>2014-09-16</treatment:date>
+			</treatment:radiology>
+		</patient:treatments>
+	</patient:Patient>
+	<provider:Provider>
+		<provider:provider-id>1</provider:provider-id>
+		<provider:name>Dr.Banat</provider:name>
+		<provider:specialization>Surgery</provider:specialization>
+	</provider:Provider>
+</m:Clinic>

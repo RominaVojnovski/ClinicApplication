@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:Clinic xmlns:m="http://www.example.org/schemas/clinic" 
+	xmlns:patient="http://www.example.org/schemas/clinic/patient" 
+	xmlns:clinicid="http://www.example.org/schemas/clinic/Clinic_ids" 
+	xmlns:treatment="http://www.example.org/schemas/clinic/treatment" 
+	xmlns:provider="http://www.example.org/schemas/clinic/provider" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://www.example.org/schemas/clinic Clinic.xsd ">
+ 	<patient:Patient>
+ 		<patient:patient-id>100</patient:patient-id>
+ 		<patient:name>Romina</patient:name>
+ 		<patient:dob>1981-08-24</patient:dob>
+ 		<patient:treatments>
+ 			<patient:treatment>
+ 				<treatment:provider-id>1</treatment:provider-id>
+ 				<treatment:diagnosis>lyme disease</treatment:diagnosis>
+ 				<treatment:drug-treatment>
+ 					<treatment:name>amoxicillin</treatment:name>
+ 					<treatment:dosage>100</treatment:dosage>		
+ 				</treatment:drug-treatment>
+ 			</patient:treatment>
+ 			<patient:treatment>
+ 				<treatment:provider-id>2</treatment:provider-id>
+ 				<treatment:diagnosis>bell's palsy</treatment:diagnosis>
+ 				<treatment:radiology>
+ 					<treatment:date>2014-09-01</treatment:date>
+ 					<treatment:date>2014-09-15</treatment:date>
+ 				</treatment:radiology>
+ 			</patient:treatment>
+ 		</patient:treatments>
+ 	</patient:Patient>
+ 	<provider:Provider>
+ 		<provider:provider-id>1</provider:provider-id>
+ 		<provider:name>Dr.Smith</provider:name>
+ 		<provider:specialization>Surgery</provider:specialization>
+ 	</provider:Provider>
+ 	<provider:Provider>
+ 		<provider:provider-id>2</provider:provider-id>
+ 		<provider:name>Dr.Jones</provider:name>
+		<provider:specialization>Radiology</provider:specialization>
+ 	</provider:Provider>
+ </m:Clinic>

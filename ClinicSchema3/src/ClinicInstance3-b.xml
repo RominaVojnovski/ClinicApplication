@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:Clinic xmlns:m="http://www.example.org/schemas/clinic3" 
+	xmlns:patient="http://www.example.org/schemas/clinic3/patient" 
+	xmlns:clinicid="http://www.example.org/schemas/clinic3/Clinic_Ids" 
+	xmlns:treatment="http://www.example.org/schemas/clinic3/treatment3" 
+	xmlns:provider="http://www.example.org/schemas/clinic3/provider" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/schemas/clinic3 Clinic.xsd ">
+	<patient:Patient>
+		<patient:patient-id>09</patient:patient-id>
+		<patient:name>James</patient:name>
+		<patient:dob>1960-10-11</patient:dob>
+		<patient:treatments>
+			<treatment:radiology>
+				<treatment:provider-id>7</treatment:provider-id>
+				<treatment:diagnosis>stomach ulcers</treatment:diagnosis>
+				<treatment:date>2014-09-28</treatment:date>
+			</treatment:radiology>
+		</patient:treatments>
+	</patient:Patient>
+	<provider:Provider>
+		<provider:provider-id>7</provider:provider-id>
+		<provider:name>Dr.Young</provider:name>
+		<provider:specialization>Radiology</provider:specialization>
+	</provider:Provider>
+</m:Clinic>

@@ -1,0 +1,3 @@
+ALTER TABLE Treatment DROP CONSTRAINT FK_Treatment_patient_fk
+DROP TABLE Patient CASCADE
+DROP TABLE Treatment CASCADE

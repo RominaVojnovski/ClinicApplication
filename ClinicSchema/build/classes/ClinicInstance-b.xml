@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:Clinic xmlns:m="http://www.example.org/schemas/clinic" 
+	xmlns:patient="http://www.example.org/schemas/clinic/patient" 
+	xmlns:clinicid="http://www.example.org/schemas/clinic/Clinic_ids" 
+	xmlns:treatment="http://www.example.org/schemas/clinic/treatment" 
+	xmlns:provider="http://www.example.org/schemas/clinic/provider" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ 	xsi:schemaLocation="http://www.example.org/schemas/clinic Clinic.xsd ">
+	
+	<patient:Patient>
+		<patient:patient-id>101</patient:patient-id>
+		<patient:name>Ginette</patient:name>
+		<patient:dob>1975-06-22</patient:dob>
+		<patient:treatments>
+			<patient:treatment>
+ 				<treatment:provider-id>10</treatment:provider-id>
+ 				<treatment:diagnosis>tonsillitis</treatment:diagnosis>
+ 				<treatment:drug-treatment>
+ 					<treatment:name>amoxicillin</treatment:name>
+ 					<treatment:dosage>100</treatment:dosage>		
+ 				</treatment:drug-treatment>
+ 			</patient:treatment>
+ 			<patient:treatment>
+ 				<treatment:provider-id>20</treatment:provider-id>
+ 				<treatment:diagnosis>tonsillectomy</treatment:diagnosis>
+ 				<treatment:surgery>
+ 					<treatment:date>2014-09-24</treatment:date>
+ 				</treatment:surgery>
+ 			</patient:treatment>	
+		</patient:treatments>	
+	</patient:Patient>
+	<provider:Provider>
+ 		<provider:provider-id>10</provider:provider-id>
+ 		<provider:name>Dr.Kim</provider:name>
+ 		<provider:specialization>Surgery</provider:specialization>
+ 	</provider:Provider>
+ 	<provider:Provider>
+ 		<provider:provider-id>20</provider:provider-id>
+ 		<provider:name>Dr.Dwyer</provider:name>
+		<provider:specialization>Surgery</provider:specialization>
+ 	</provider:Provider>
+</m:Clinic>

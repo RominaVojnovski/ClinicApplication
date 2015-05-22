@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<clin:Clinic xmlns:cids="http://www.example.org/schemas/clinic/Clinic_ids" xmlns:clin="http://www.example.org/schemas/clinic" xmlns:pat="http://www.example.org/schemas/clinic/patient" xmlns:prov="http://www.example.org/schemas/clinic/provider" xmlns:trmt="http://www.example.org/schemas/clinic/treatment" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.example.org/schemas/clinic Clinic.xsd ">
+	<pat:Patient>
+		<pat:patient-id>12345</pat:patient-id>
+		<pat:name>Carrie Fisher</pat:name>
+		<pat:dob>1995-03-21</pat:dob>
+		<pat:treatments>
+			<pat:treatment>
+				<trmt:provider-id>7878</trmt:provider-id>
+				<trmt:diagnosis>migraine</trmt:diagnosis>
+				<trmt:drug-treatment>
+					<trmt:name>relpax</trmt:name>
+					<trmt:dosage>35</trmt:dosage>
+				</trmt:drug-treatment>
+			</pat:treatment>
+		</pat:treatments>
+	</pat:Patient>
+	<pat:Patient>
+		<pat:patient-id>12312</pat:patient-id>
+		<pat:name>Harrison Ford</pat:name>
+		<pat:dob>1990-05-09</pat:dob>
+		<pat:treatments>
+			<pat:treatment>
+				<trmt:provider-id>8080</trmt:provider-id>
+				<trmt:diagnosis>aids</trmt:diagnosis>
+				<trmt:drug-treatment>
+					<trmt:name>art</trmt:name>
+					<trmt:dosage>78.0</trmt:dosage>
+				</trmt:drug-treatment>
+			</pat:treatment>
+			<pat:treatment>
+				<trmt:provider-id>1010</trmt:provider-id>
+				<trmt:diagnosis>cancer</trmt:diagnosis>
+				<trmt:radiology>
+					<trmt:date>2014-09-01</trmt:date>
+					<trmt:date>2014-10-01</trmt:date>
+					<trmt:date>2014-11-01</trmt:date>
+				</trmt:radiology>
+				
+			</pat:treatment></pat:treatments>
+	</pat:Patient>
+	<pat:Patient>
+		<pat:patient-id>11111</pat:patient-id>
+		<pat:name>Mark Hamill</pat:name>
+		<pat:dob>1993-02-14</pat:dob>
+		<pat:treatments>
+			<pat:treatment>
+				<trmt:provider-id>8080</trmt:provider-id>
+				<trmt:diagnosis>migraine</trmt:diagnosis>
+				<trmt:drug-treatment>
+					<trmt:name>relpax</trmt:name>
+					<trmt:dosage>15.0</trmt:dosage>
+				</trmt:drug-treatment>
+			</pat:treatment></pat:treatments>
+	</pat:Patient>
+	<pat:Patient>
+		<pat:patient-id>55555</pat:patient-id>
+		<pat:name>David Prowse</pat:name>
+		<pat:dob>1989-10-31</pat:dob>
+		<pat:treatments>
+			<pat:treatment>
+				<trmt:provider-id>7878</trmt:provider-id>
+				<trmt:diagnosis>appendicitis</trmt:diagnosis>
+				<trmt:surgery>
+					<trmt:date>2012-06-15</trmt:date>
+				</trmt:surgery>
+				
+			</pat:treatment></pat:treatments>
+	</pat:Patient>
+	<prov:Provider>
+		<prov:provider-id>7878</prov:provider-id>
+		<prov:name>Irving Kershner</prov:name>
+		<prov:specialization>Surgery</prov:specialization>
+	</prov:Provider></clin:Clinic>

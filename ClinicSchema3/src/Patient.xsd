@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema targetNamespace="http://www.example.org/schemas/clinic3/patient"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema" 
+	xmlns:tns="http://www.example.org/schemas/clinic3/patient" 
+	xmlns:cids="http://www.example.org/schemas/clinic3/Clinic_Ids" 
+	xmlns:trmt="http://www.example.org/schemas/clinic3/treatment3">
+	<import schemaLocation="ClinicIds.xsd"
+		namespace="http://www.example.org/schemas/clinic3/Clinic_Ids">
+	</import>
+	<import schemaLocation="Treatment3.xsd" namespace="http://www.example.org/schemas/clinic3/treatment3"></import>
+
+	<complexType name="PatientType">
+		<sequence>
+			<element name="patient-id" type="cids:PatientIdType"></element>
+			<element name="name" type="string"></element>
+			<element name="dob" type="date"></element>
+			<element name="treatments">
+				<complexType>
+					<sequence>
+						<element ref="trmt:treatment" minOccurs="0" maxOccurs="unbounded"></element>
+					</sequence>
+				</complexType></element>
+		</sequence>
+	</complexType>
+
+    <element name="Patient" type="tns:PatientType"></element>
+</schema>

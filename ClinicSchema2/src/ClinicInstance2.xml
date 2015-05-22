@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<m:Clinic xmlns:m="http://www.example.org/schemas/clinic2" 
+	xmlns:patient="http://www.example.org/schemas/clinic2/patient" 
+	xmlns:clinicid="http://www.example.org/schemas/clinic2/Clinic_Ids" 
+	xmlns:treatment="http://www.example.org/schemas/clinic2/treatment2" 
+	xmlns:provider	="http://www.example.org/schemas/clinic2/provider" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://www.example.org/schemas/clinic2 Clinic.xsd ">
+	<patient:Patient>
+		<patient:patient-id>201</patient:patient-id>
+		<patient:name>Vlade</patient:name>
+		<patient:dob>1985-04-14</patient:dob>
+		<patient:treatments>
+			<patient:treatment xsi:type="treatment:DrugTreatmentType">
+				<treatment:provider-id>22</treatment:provider-id>
+				<treatment:diagnosis>migraine</treatment:diagnosis>
+				<treatment:name>anaprox</treatment:name>
+				<treatment:dosage>1</treatment:dosage>		
+			</patient:treatment>
+		</patient:treatments>
+	</patient:Patient>
+	<provider:Provider>
+		<provider:provider-id>22</provider:provider-id>
+		<provider:name>Dr.Mully</provider:name>
+		<provider:specialization>Radiology</provider:specialization>	
+	</provider:Provider>
+</m:Clinic>

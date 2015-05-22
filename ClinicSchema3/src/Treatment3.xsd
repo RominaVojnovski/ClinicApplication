@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema
+	targetNamespace="http://www.example.org/schemas/clinic3/treatment3"
+	elementFormDefault="qualified" xmlns="http://www.w3.org/2001/XMLSchema"
+	xmlns:tns="http://www.example.org/schemas/clinic3/treatment3" 
+	xmlns:cids="http://www.example.org/schemas/clinic3/Clinic_Ids">
+	<import schemaLocation="ClinicIds.xsd" namespace="http://www.example.org/schemas/clinic3/Clinic_Ids"></import>
+	
+	<element name="treatment" type="tns:TreatmentType" abstract="true" />
+	<element name="drug" substitutionGroup="tns:treatment" type="tns:DrugTreatmentType" />
+	<element name="radiology" substitutionGroup="tns:treatment" type="tns:RadiologyType" />
+	<element name="surgery" substitutionGroup="tns:treatment" type="tns:SurgeryType" />
+	
+	
+	<complexType name="TreatmentType" abstract="true">
+		<sequence>
+			<element name="provider-id" type="cids:ProviderIdType"></element>
+			<element name="diagnosis" type="string"></element>
+		</sequence>
+	</complexType>
+	
+	<complexType name="DrugTreatmentType">
+		<complexContent>
+			<extension base="tns:TreatmentType">
+				<sequence>
+					<element name="name" type="string"></element>
+					<element name="dosage" type="float"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="RadiologyType">
+		<complexContent>
+			<extension base="tns:TreatmentType">
+				<sequence>
+					<element name="date" type="date" minOccurs="1" maxOccurs="unbounded"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	<complexType name="SurgeryType">
+		<complexContent>
+			<extension base="tns:TreatmentType">
+				<sequence>
+					<element name="date" type="date"></element>
+				</sequence>
+			</extension>
+		</complexContent>
+	</complexType>
+	
+</schema>
